@@ -1,6 +1,10 @@
 const initialState = {
-    diff: 'easy',
-    firstCardClicked: false
+    level: 'easy',
+    firstCardClicked: false,
+    secondCardClicked: false,
+    firstValue: undefined,
+    secondValue: undefined,
+    cards: [],
 }
 
 export default initialState;

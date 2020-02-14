@@ -1,11 +1,11 @@
 
-const generateArr = (diff) => {
+const generateArr = (level) => {
     let arr = [];
-    if(diff === 'easy') {
+    if(level === 'easy') {
         looper(arr, 10);
-    } else if(diff === 'medium') {
+    } else if(level === 'medium') {
         looper(arr, 20);
-    } else if(diff === 'hard') {
+    } else if(level === 'hard') {
         looper(arr, 30);
     }
     return arr;
