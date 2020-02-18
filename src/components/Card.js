@@ -1,18 +1,42 @@
-import React from 'react'
+import React from 'react';
 
-const Card = (props) => {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fontArr } from './fontArr';
 
-    const { number, checkClick } = props;
+// const Card = (props) => {
 
-    const handleClick = () => {
-        checkClick(number);
+//     const { number, checkClick, idx, firstId, secondId } = props;
+
+//     const handleClick = () => {
+//         checkClick(number, idx);
+//     }
+
+//     return (
+//         <div className="Card" onClick={handleClick}>
+//             <FontAwesomeIcon className={idx === (firstId || secondId) ? 'active' : 'hide'} icon={fontArr[number]} />
+//         </div>
+//     );
+// }
+
+class Card extends React.Component {
+
+    handleClick = (e) => {
+        const { checkClick, number, idx } = this.props;
+
+        checkClick(number, idx);
     }
 
-    return (
-        <div className="Card" onClick={handleClick}>
-            <p>{ number }</p>
-        </div>
-    );
+    render() {
+        const { number, ifThisIsActive } = this.props;
+
+        return (
+            <div className='Card' onClick={this.handleClick}>
+                <div className={`card--icon ${ifThisIsActive}`}>
+                    <FontAwesomeIcon icon={fontArr[number]} />
+                </div> 
+            </div>
+        );
+    }
 }
 
 export default Card;

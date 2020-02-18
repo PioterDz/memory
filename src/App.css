@@ -23,9 +23,25 @@
 
 .Card {
   display: block;
-  height: auto;
+  height: 75px;
   margin: 2em;
   border: 1px solid white;
-  width: 18%;
+  width: 75px;
 }
 
+.Card:hover {
+  cursor: pointer;
+}
+
+.card--icon {
+  height: 100%;
+  width: 100%;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}

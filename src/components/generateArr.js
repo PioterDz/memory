@@ -1,13 +1,7 @@
 
 const generateArr = (level) => {
     let arr = [];
-    if(level === 'easy') {
-        looper(arr, 10);
-    } else if(level === 'medium') {
-        looper(arr, 20);
-    } else if(level === 'hard') {
-        looper(arr, 30);
-    }
+    looper(arr, level);
     return arr;
 }
 
