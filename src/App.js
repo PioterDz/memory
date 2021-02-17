@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import Cards from './components/Cards/CardsContainer';
+import SideBar from './components/SideBar/SideBarContainer';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCheckSquare, faCoffee, faAngry, faBaseballBall, faBasketballBall, faBible, faBowlingBall, 
+        faBus, faBookDead, faCar, faCarSide, faDemocrat, faAddressBook, faAddressCard, faBell } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faCheckSquare, faCoffee, faAngry, faBaseballBall, faBasketballBall, faBible, faBowlingBall, 
+            faBus, faBookDead, faCar, faCarSide, faDemocrat, faAddressBook, faAddressCard, faBell);
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Memory Game!</h1>
       </header>
+      <SideBar />
+      <Cards />
     </div>
   );
 }
